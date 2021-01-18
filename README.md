@@ -1,5 +1,5 @@
 # COVID-19-API
-A REST API to provides some basic information from a website using beautifulsoup4 and Flask.
+A REST API to provide some information related to COVID-19 from a website using beautifulsoup4 and Flask.
 
 The information provided by the REST API is scraped from the given website: https://www.mohfw.gov.in/
 
