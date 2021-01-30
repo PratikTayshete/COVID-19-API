@@ -11,7 +11,8 @@ The REST API provides the following information:
   
   - Total vaccination count.
   
- 
+Implementation Video: https://youtu.be/NaPRBmRgskQ
+
 Prerequisites:
 
  - Install Docker and Docker-Compose
@@ -31,3 +32,4 @@ References:
 
  - https://docs.docker.com/
  - https://hub.docker.com/
+ 
