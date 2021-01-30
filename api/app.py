@@ -52,9 +52,9 @@ class VaccinationInfo(Resource):
 
 app = Flask(__name__)
 api = Api(app)
-api.add_resource(CovidOverallStats, "/covid-overall-stats")  # http://127.0.0.1:5000/covid-overall-stats
-api.add_resource(CovidContactInfo, "/covid-contact-info")  # http://127.0.0.1:5000/covid-contact-info
-api.add_resource(VaccinationInfo, "/covid-vaccination-info") # http://127.0.0.1:5000/covid-vaccination-info
+api.add_resource(CovidOverallStats, "/covid-overall-stats")
+api.add_resource(CovidContactInfo, "/covid-contact-info")
+api.add_resource(VaccinationInfo, "/covid-vaccination-info")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
