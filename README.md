@@ -11,7 +11,7 @@ The REST API provides the following information:
   
   - Total vaccination count.
   
-Implementation Video: https://youtu.be/NaPRBmRgskQ
+Demonstration Video: https://youtu.be/NaPRBmRgskQ
 
 Prerequisites:
 
