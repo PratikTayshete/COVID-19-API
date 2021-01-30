@@ -9,14 +9,25 @@ The REST API provides the following information:
   
   - Contact information for COVID-19 queries.
   
- 
-### Python version:
-Python 3.6.9
+  - Total vaccination count.
   
-### Install required packages:
+ 
+Prerequisites:
 
-`pip install -r requirements.txt`
+ - Install Docker and Docker-Compose
 
-### Start the Flask application:
+    - https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
-`python3 app.py`
+    - https://docs.docker.com/docker-for-windows/install/
+
+    - https://docs.docker.com/compose/install/
+
+Run the Flask app via docker (from the parent directory):
+
+    docker-compose build 
+    docker-compose up
+
+References:
+
+ - https://docs.docker.com/
+ - https://hub.docker.com/

@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, make_response
 from flask_restful import Resource, Api
-from scraper.covidDataScraper import CovidData
+from data.covid_data import CovidData
 
 
 covid_data = CovidData()
@@ -36,10 +36,25 @@ class CovidContactInfo(Resource):
         return response
 
 
+class VaccinationInfo(Resource):
+    def get(self):
+        """
+        Returns a json response that contains contact information for COVID-19 as mentioned at https://www.mohfw.gov.in/
+
+        :return: response - Json data that contains the vaccination count with specific header and status code.
+        """
+        json_response = jsonify(({"vaccination-count": covid_data.get_vaccination_count()}))
+        response = make_response(json_response)
+        response.headers["Content-Type"] = "application/json"
+        response.status_code = 200
+        return response
+
+
 app = Flask(__name__)
 api = Api(app)
 api.add_resource(CovidOverallStats, "/covid-overall-stats")  # http://127.0.0.1:5000/covid-overall-stats
 api.add_resource(CovidContactInfo, "/covid-contact-info")  # http://127.0.0.1:5000/covid-contact-info
+api.add_resource(VaccinationInfo, "/covid-vaccination-info") # http://127.0.0.1:5000/covid-vaccination-info
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(host='0.0.0.0')

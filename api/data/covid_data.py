@@ -107,3 +107,12 @@ class CovidData:
 
         return contact_information
 
+    def get_vaccination_count(self):
+        """
+        Returns the vaccination count for COVID-19 as provided in the URL.
+        :return: vaccination_count: Total vaccination count.
+        """
+        parsed_data = self.__get_response()
+        vaccination_count_section = parsed_data.find("div", {"class": "fullbol"}).find("span", {"class": "coviddata"})
+        vaccination_count = vaccination_count_section.text
+        return vaccination_count
